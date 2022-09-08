@@ -393,45 +393,75 @@ int main() {
 
 /* 1172
 
+#include <stdio.h>
 
+int main() {
+    int a, b, c;
+    int temp = 0;
+	scanf("%d %d %d", &a, &b, &c);
+	
+    if(a >= b){
+        temp = b;
+        b = a;
+        a = temp;
+    }
+    if(b >= c){
+        temp = c;
+        c = b;
+        b = temp;
+    }
+    if(a >= b){
+        temp = b;
+        b = a;
+        a = temp;
+    }
+
+    printf("%d %d %d", a, b, c);
+}
 
 ----------*/
 
-/* 1173
-
-
-
-----------*/
-
-/* 1180
-
-
-
-----------*/
+/* 1173     //어려움
 
 #include <stdio.h>
 
 int main() {
     int a, b, c;
-	scanf("%d %d %d", &a, &b, &c);
+	scanf("%d %d", &a, &b);
 	
-	if(a <= b && a < c) {
-        if(b < c)  {
-            printf("%d %d %d", a, b, c);
-        } else {
-            printf("%d %d %d", a, c, b);
+    if(b < 30) {
+        b += 30;
+        a -= 1;
+        if(a < 0) {
+            a = 23;
         }
-    } else if(b <= a && b < c) {
-        if(a < c) {
-            printf("%d %d %d", b, a, c); 
-        } else {
-            printf("%d %d %d", b, c, a);
-        }
-    } else if(c < a && c < b) {
-        if(a < b) {
-            printf("%d %d %d", c, a, b);
-        } else {
-            printf("%d %d %d", c, b, a);
-        }
+        printf("%d %d", a, b);
+    } else if(b >= 30) {
+        b -=30;
+        printf("%d %d", a, b);
     }
 }
+
+----------*/  
+
+/* 1180     //어려움
+
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d", &a);
+
+    b = (a % 10 * 10) + (a / 10);
+    b *= 2;
+    b = b % 100;
+    printf("%d\n", b);
+
+    if(b <= 50) {
+        printf("GOOD");
+    } else {
+        printf("OH MY GOD");
+    }
+}
+
+----------*/
