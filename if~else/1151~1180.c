@@ -190,26 +190,76 @@ int main() {
 
 /* 1162
 
+#include <stdio.h>
 
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if ((a - b + c) % 10 == 0) {
+        printf("대박");
+    } else {
+        printf("그럭저럭");
+    }
+}
 
 ----------*/
 
 
 /* 1163
 
+#include <stdio.h>
 
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if ((int)((a + b + c) / 100) % 2 == 0) {
+        printf("대박");
+    } else {
+        printf("그럭저럭");
+    }
+}
 
 ----------*/
 
 /* 1164
 
+#include <stdio.h>
 
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if(a <= 170) {
+        printf("CRASH");
+    } else if(b <= 170) {
+        printf("CRASH");
+    } else if(c <= 170) {
+        printf("CRASH"); 
+    } else {
+        printf("PASS");
+    }
+}
 
 ----------*/
 
 /* 1165
 
+#include <stdio.h>
 
+int main() {
+    int a, b, sum = 0;
+    scanf("%d %d", &a, &b);
+    b+=1;
+    for(int i = a; i < 89; i++ ) {
+        sum++;
+        if(sum % 5 == 0) {
+            b += 1;
+        }
+    }
+    printf("%d", b);
+}
 
 ----------*/
 
@@ -271,12 +321,16 @@ int main() {
 #include <stdio.h>
 
 int main() {
-    int a, b, c;
-    scanf("%d %d %d", &a, &b, &c);
-    
-    if (a - b + c == 0) {
-        printf("대박");
+    int a;
+    scanf("%d", &a);
+
+    if(a % 400 == 0) {
+        printf("Leap");
+    } else if(a % 4 == 0 && a % 100 != 0) {
+        printf("Leap");
     } else {
-        printf("그럭저럭");
+        printf("Normal");
     }
+
+    
 }
