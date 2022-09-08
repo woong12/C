@@ -265,38 +265,129 @@ int main() {
 
 /* 1166
 
+int main() {
+    int a;
+    scanf("%d", &a);
 
+    if(a % 400 == 0) {
+        printf("Leap");
+    } else if(a % 4 == 0 && a % 100 != 0) {
+        printf("Leap");
+    } else {
+        printf("Normal");
+    }   
+}
 
 ----------*/
 
 /* 1167
 
+#include <stdio.h>
 
+int main() {
+    int a, b, c, result;
+    result = 0;
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if(a <= b && a <= c) {
+        if(b <= c) {
+            result = b;
+        } else {
+            result = c;
+        }
+    } else if(b <= a && b <= c) {
+        if(a <= c) {
+            result = a;
+        } else {
+            result = c;
+        }
+    } else if(c <= a && c <= b) {
+        if(a <= b) {
+            result = a;
+        } else {
+            result = b;
+        }
+    }
+    printf("%d",  result);
+}
 
 ----------*/
 
 /* 1168
 
+#include <stdio.h>
 
+int main() {
+    int a, b, c;
+    scanf("%d %d", &a, &b);
+    c = a / 10000;
+    if(b == 1 || b == 2) {
+        printf("%d", 2012 - (1900+c) + 1);
+    } else {
+        printf("%d", 2012 - (2000+c) + 1);
+    }
+}
 
 ----------*/
 
 /* 1169
 
+#include <stdio.h>
 
+int main() {
+    int a, b, c, d;
+    scanf("%d", &a);
+
+    a = 2012 - a + 1; //태어난 나이
+    b = a % 100;  //태어난 나이 뒤의 두 자리 수
+
+    if(a < 2000) {
+        printf("%d %d", b, 1);
+    } else {
+        printf("%d %d", b, 3);
+    }
+}
 
 ----------*/
 
 /* 1170
 
+#include <stdio.h>
 
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+
+    if(c > 10) {
+        printf("%d%d%d", a, b, c);
+    } else {
+        printf("%d%d0%d", a, b, c);
+    }
+}
 
 ----------*/
 
 
 /* 1171
 
+#include <stdio.h>
 
+int main() {
+    int a, b, c;
+	scanf("%d %d %d", &a, &b, &c);
+	
+	if (b<10)
+		printf("%d0%d", a, b);
+	else
+		printf("%d%d", a, b);
+	
+	if (c<10)
+		printf("00%d", c);
+	else if (c<100)
+		printf("0%d", c);
+	else
+		printf("%d", c);
+}
 
 ----------*/
 
@@ -321,16 +412,26 @@ int main() {
 #include <stdio.h>
 
 int main() {
-    int a;
-    scanf("%d", &a);
-
-    if(a % 400 == 0) {
-        printf("Leap");
-    } else if(a % 4 == 0 && a % 100 != 0) {
-        printf("Leap");
-    } else {
-        printf("Normal");
+    int a, b, c;
+	scanf("%d %d %d", &a, &b, &c);
+	
+	if(a <= b && a < c) {
+        if(b < c)  {
+            printf("%d %d %d", a, b, c);
+        } else {
+            printf("%d %d %d", a, c, b);
+        }
+    } else if(b <= a && b < c) {
+        if(a < c) {
+            printf("%d %d %d", b, a, c); 
+        } else {
+            printf("%d %d %d", b, c, a);
+        }
+    } else if(c < a && c < b) {
+        if(a < b) {
+            printf("%d %d %d", c, a, b);
+        } else {
+            printf("%d %d %d", c, b, a);
+        }
     }
-
-    
 }
