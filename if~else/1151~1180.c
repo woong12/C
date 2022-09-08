@@ -163,7 +163,28 @@ int main() {
 
 /* 1161
 
+#include <stdio.h>
 
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+    
+    if(a % 2 != 0) {
+        printf("È¦¼ö+");
+        if(b % 2 == 0) {
+            printf("Â¦¼ö=È¦¼ö");
+        } else {
+            printf("È¦¼ö=Â¦¼ö");
+        }
+    } else if(a % 2 == 0) {
+        printf("Â¦¼ö+");
+        if(b % 2 == 0) {
+            printf("Â¦¼ö=Â¦¼ö");
+        } else {
+            printf("È¦¼ö=È¦¼ö");
+        }
+    }
+}
 
 ----------*/
 
@@ -250,13 +271,12 @@ int main() {
 #include <stdio.h>
 
 int main() {
-
-    int a;
-    scanf("%d", &a);
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
     
-    if(a % 2 == 1) { 
-        printf("oh my god");
-    }else{
-        printf("enjoy");
+    if (a - b + c == 0) {
+        printf("´ë¹Ú");
+    } else {
+        printf("±×·°Àú·°");
     }
 }
