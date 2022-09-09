@@ -451,17 +451,6 @@ int main() {
 
 /* 1230
 
-
-
-----------*/
-
-/* 1231
-
-
-
-----------*/
-
-
 #include <stdio.h>
 
 int main() {
@@ -480,3 +469,27 @@ int main() {
 		printf("PASS");
 	
 }
+
+----------*/
+
+/* 1231
+
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    char c;
+    scanf("%d%c%d", &a, &c, &b);
+    
+    if(c == '+') {
+        printf("%d", a + b);
+    } else if(c == '-') {
+        printf("%d", a - b);
+    } else if(c == '*') {
+        printf("%d", a * b);
+    } else if(c == '/') {
+        printf("%.2f", (float)a / (float)b);
+    }
+}
+
+----------*/
