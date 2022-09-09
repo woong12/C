@@ -329,25 +329,123 @@ int main() {
 
 /* 1224
 
+#include <stdio.h>
 
+int main() {
+    double a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+
+    if((double)(a / b) > (double)(c / d)) {
+        printf(">");
+    } else if((double)(a / b) == (double)(c / d)) {
+        printf("=");
+    } else if((double)(a / b) < (double)(c / d)) {
+        printf("<");
+    }
+}
 
 ----------*/
 
-/* 1226
+/* 1226     //어려움
 
+#include <stdio.h>
 
+int main() {
+    int a1, a2, a3, a4, a5, a6, a0, b1, b2, b3, b4, b5, b6;\
+    int score = 0;
+    scanf("%d %d %d %d %d %d %d", &a1, &a2, &a3, &a4, &a5, &a6, &a0);
+    scanf("%d %d %d %d %d %d", &b1, &b2, &b3, &b4, &b5, &b6);
+
+    if(a1 == b1 || a1 == b2 || a1 == b3 || a1 == b4 || a1 == b5 || a1 == b6) {
+        score ++;
+    }
+    if(a2 == b1 || a2 == b2 || a2 == b3 || a2 == b4 || a2 == b5 || a2 == b6) {
+        score ++;
+    }
+    if(a3 == b1 || a3 == b2 || a3 == b3 || a3 == b4 || a3 == b5 || a3 == b6) {
+        score ++;
+    }
+    if(a4 == b1 || a4 == b2 || a4 == b3 || a4 == b4 || a4 == b5 || a4 == b6) {
+        score ++;
+    }
+    if(a5 == b1 || a5 == b2 || a5 == b3 || a5 == b4 || a5 == b5 || a5 == b6) {
+        score ++;
+    }
+    if(a6 == b1 || a6 == b2 || a6 == b3 || a6 == b4 || a6 == b5 || a6 == b6) {
+        score ++;
+    }
+
+    if(score == 6) {
+        printf("1");
+    } else if((a0 == b1 || a0 == b2 || a0 == b3 || a0 == b4 || a0 == b5 || a0 == b6) && score == 5) {
+        printf("2");
+    } else if(score == 5) {
+        printf("3");
+    } else if(score == 4) {
+        printf("4");
+    } else if(score == 3) {
+        printf("5");
+    } else {
+        printf("0");
+    }
+}
 
 ----------*/
 
 /* 1228
 
+#include <stdio.h>
 
+int main() {
+    double a, b, c, d;
+    scanf("%lf %lf", &a, &b);
+
+    c = (a - 100) * 0.9;
+    d = (b - c) * 100 / c;
+
+    if(d <= 10) {
+        printf("정상");
+    } else if(d <= 20) {
+        printf("과체중");
+    } else {
+        printf("비만");
+    }
+}
 
 ----------*/
 
 /* 1229
 
+#include <stdio.h>
 
+int main() {
+    int a,b,c,d;
+    double fat;
+    double ttt;
+    double realweight;
+    double weight;
+    
+    scanf("%lf %lf", &ttt, &realweight);
+
+    if(ttt < 150){                                                                //키에 따른 계산        
+        double realweighttt = (ttt - 100);
+        weight = (realweight - realweighttt) * 100 / realweighttt;
+    }else if(ttt < 160){
+        double realweighttt = (ttt - 150)/2 + 50;
+        weight = (realweight - realweighttt) * 100 / realweighttt;
+    }else{
+        double realweighttt = (ttt - 100) * 0.9;
+        weight = (realweight - realweighttt) * 100 / realweighttt;
+    }
+        
+    if(weight <= 10){
+        printf("정상");
+    }else if(weight <= 20){
+        printf("과체중");
+    }else{
+        printf("비만");
+    }
+}
 
 ----------*/
 
@@ -367,14 +465,18 @@ int main() {
 #include <stdio.h>
 
 int main() {
-    double a, b, c, d;
-    scanf("%d %d %d %d", &a, &b, &c, &d);
-
-    if((double)(a / b) > (double)(c / d)) {
-        printf(">");
-    } else if((double)(a / b) == (double)(c / d)) {
-        printf("=");
-    } else if((double)(a / b) < (double)(c / d)) {
-        printf("<");
-    }
+    int a,b,c;
+	int height= 170;
+	
+	scanf("%d %d %d",&a,&b,&c); 
+	
+	if(a <= height)
+		printf("CRASH %d",a);
+	else if(b <= height)
+		printf("CRASH %d",b);
+	else if(c <= height)
+		printf("CRASH %d",c);
+	else
+		printf("PASS");
+	
 }
