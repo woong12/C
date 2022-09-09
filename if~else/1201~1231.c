@@ -1,12 +1,42 @@
 /* 1201
 
+#include <stdio.h>
 
+int main() {
+    int a;
+    scanf("%d", &a);
+    
+    if(a > 0) {
+        printf("양수");
+    } else if(a < 0) {
+        printf("음수");
+    } else {
+        printf("0");
+    }
+}
 
 ----------*/
 
 /* 1202
 
+#include <stdio.h>
 
+int main() {
+    int a;
+    scanf("%d", &a);
+    
+    if(a >= 90) {
+        printf("A");
+    } else if(a >= 80) {
+        printf("B");
+    } else if(a >= 70) {
+        printf("C");
+    } else if(a >= 60) {
+        printf("D");
+    } else {
+        printf("F");
+    }
+}
 
 ----------*/
 
@@ -127,5 +157,14 @@
 #include <stdio.h>
 
 int main() {
+    int a;
+    scanf("%d", &a);
     
+    if(a <= 10) {
+        printf("정상");
+    } else if(a <= 20) {
+        printf("과체중");
+    } else {
+        printf("비만");
+    }
 }
