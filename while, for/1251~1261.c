@@ -1,12 +1,27 @@
 /* 1251
 
+#include <stdio.h>
 
+int main() {
+    for (int i = 1; i <= 100; i++) {
+        printf("%d ", i);
+    }
+}
 
 ----------*/
 
 /* 1252
 
+#include <stdio.h>
 
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        printf("%d ", i);
+    }
+}
 
 ----------*/
 
@@ -67,7 +82,16 @@
 #include <stdio.h>
 
 int main() {
-    for (int i = 1; i <= 100; i++) {
-        printf("%d ", i);
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    if(a < b) {
+        for (int i = a; i <= b; i++) {
+            printf("%d ", i);
+        }
+    } else {
+        for (int i = b; i <= a; i++) {
+            printf("%d ", i);
+        }
     }
 }
