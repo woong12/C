@@ -27,13 +27,37 @@ int main() {
 
 /* 1253
 
+#include <stdio.h>
 
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    if(a < b) {
+        for (int i = a; i <= b; i++) {
+            printf("%d ", i);
+        }
+    } else {
+        for (int i = b; i <= a; i++) {
+            printf("%d ", i);
+        }
+    }
+}
 
 ----------*/
 
 /* 1254
 
+#include <stdio.h>
 
+int main() {
+    char a, b;
+    scanf("%c %c", &a, &b);
+
+    for(int i = a; i <= b; i++) {
+        printf("%c ", i);
+    }
+}
 
 ----------*/
 
@@ -82,16 +106,5 @@ int main() {
 #include <stdio.h>
 
 int main() {
-    int a, b;
-    scanf("%d %d", &a, &b);
-
-    if(a < b) {
-        for (int i = a; i <= b; i++) {
-            printf("%d ", i);
-        }
-    } else {
-        for (int i = b; i <= a; i++) {
-            printf("%d ", i);
-        }
-    }
+    
 }
