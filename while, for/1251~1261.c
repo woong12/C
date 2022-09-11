@@ -93,13 +93,33 @@ int main() {
 
 /* 1257
 
+#include <stdio.h>
 
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    for(int i = a; i <= b; i++) {
+        if(i % 2 == 1) {
+        printf("%d ", i);
+        }
+    }
+}
 
 ----------*/
 
 /* 1258
 
+#include <stdio.h>
 
+int main() {
+    int sum = 0, a;
+    scanf("%d", &a);
+    for(int i = 1; i <= a; i++) {
+        sum += i;
+    }
+    printf("%d", sum);
+}
 
 ----------*/
 
@@ -124,12 +144,12 @@ int main() {
 #include <stdio.h>
 
 int main() {
-    int a, b;
-    scanf("%d %d", &a, &b);
-
-    for(int i = a; i <= b; i++) {
-        if(i % 2 == 1) {
-        printf("%d ", i);
+    int sum = 0, a;
+    scanf("%d", &a);
+    for(int i = 1; i <= a; i++) {
+        if(i % 2 == 0) {
+            sum += i;
         }
     }
+    printf("%d", sum);
 }
