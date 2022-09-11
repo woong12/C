@@ -125,22 +125,6 @@ int main() {
 
 /* 1259
 
-
-
-----------*/
-
-/* 1260
-
-
-
-----------*/
-
-/* 1261
-
-
-
-----------*/
-
 #include <stdio.h>
 
 int main() {
@@ -153,3 +137,42 @@ int main() {
     }
     printf("%d", sum);
 }
+
+----------*/
+
+/* 1260
+
+#include <stdio.h>
+
+int main() {
+    int sum = 0, a, b;
+    scanf("%d %d", &a, &b);
+    for(int i = a; i <= b; i++) {
+        if(i % 3 == 0) {
+            sum += i;
+        }
+    }
+    printf("%d", sum);
+}
+
+----------*/
+
+/* 1261
+
+#include <stdio.h>
+
+int main(){
+	int num[11],i,b=0;
+	for(i=0; i<11; i++){
+		scanf("%d",&num[i]);
+		if(num[i]%5==0){
+			printf("%d",num[i]);
+			b++;
+			break;
+		}
+	}
+	if(b==0)
+		printf("0");
+}
+
+----------*/
