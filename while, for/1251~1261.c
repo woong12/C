@@ -63,13 +63,31 @@ int main() {
 
 /* 1255
 
+#include <stdio.h>
 
+int main() {
+    double a, b;
+    scanf("%lf %lf", &a, &b);
+
+    for(double i = a; i <= b; i+=0.01) {
+        printf("%.2lf ", i);
+    }
+}
 
 ----------*/
 
 /* 1256
 
+#include <stdio.h>
 
+int main() {
+    int a;
+    scanf("%d", &a);
+
+    for(int i = 1; i <= a; i++) {
+        printf("*");
+    }
+}
 
 ----------*/
 
@@ -106,10 +124,12 @@ int main() {
 #include <stdio.h>
 
 int main() {
-    double a, b;
-    scanf("%lf %lf", &a, &b);
+    int a, b;
+    scanf("%d %d", &a, &b);
 
-    for(double i = a; i <= b; i+=0.01) {
-        printf("%.2lf ", i);
+    for(int i = a; i <= b; i++) {
+        if(i % 2 == 1) {
+        printf("%d ", i);
+        }
     }
 }
