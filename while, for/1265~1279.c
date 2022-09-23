@@ -32,7 +32,20 @@ int main () {
 
 /* 1267
 
+#include <stdio.h>
 
+int main () {
+    int n, a, sum = 0;
+    scanf("%d", &n);
+
+    for(int i = 1; i <= n; i++) {
+        scanf("%d", &a);
+        if (a % 5 == 0) {
+        sum += a;
+        }
+    }
+    printf("%d", sum);
+}
 
 ----------*/
 
@@ -116,8 +129,8 @@ int main () {
 
     for(int i = 1; i <= n; i++) {
         scanf("%d", &a);
-        if (a % 5 == 0) {
-        sum += a;
+        if (a % 2 == 0) {
+        sum += 1;
         }
     }
     printf("%d", sum);
