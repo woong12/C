@@ -15,7 +15,18 @@ int main () {
 
 /* 1266
 
+#include <stdio.h>
 
+int main () {
+    int n, a, sum = 0;
+    scanf("%d", &n);
+
+    for(int i = 1; i <= n; i++) {
+        scanf("%d", &a);
+        sum += a;
+    }
+    printf("%d", sum);
+}
 
 ----------*/
 
@@ -100,10 +111,14 @@ int main () {
 #include <stdio.h>
 
 int main () {
-    int a;
-    scanf("%d", &a);
+    int n, a, sum = 0;
+    scanf("%d", &n);
 
-    for (int i = 1; i <= 9; i++) {
-        printf("%d*%d=%d\n", a, i, a*i);
+    for(int i = 1; i <= n; i++) {
+        scanf("%d", &a);
+        if (a % 5 == 0) {
+        sum += a;
+        }
     }
+    printf("%d", sum);
 }
