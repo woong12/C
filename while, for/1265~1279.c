@@ -70,13 +70,35 @@ int main () {
 
 /* 1269
 
+#include <stdio.h>
 
+int main () {
+    int a, b, c, n;
+    scanf("%d %d %d %d", &a, &b, &c, &n);
+
+    for(int i = 1; i < n; i ++) {
+			a = a * b + c;
+		}
+    printf("%d", a);
+}
 
 ----------*/
 
 /* 1270
 
+#include <stdio.h>
 
+int main () {
+    int a, sum = 0;
+    scanf("%d", &a);
+    
+    for(int i = 0; i <= a; i++) {
+        if(i % 10 == 1) {
+            sum += 1;
+        }
+    }
+    printf("%d", sum);
+}
 
 ----------*/
 
@@ -137,11 +159,13 @@ int main () {
 #include <stdio.h>
 
 int main () {
-    int a, b, c, n;
-    scanf("%d %d %d %d", &a, &b, &c, &n);
-
-    for(int i = 1; i < n; i ++) {
-			a = a * b + c;
-		}
-    printf("%d", a);
+    int a, sum = 0;
+    scanf("%d", &a);
+    
+    for(int i = 0; i <= a; i++) {
+        if(i % 10 == 1) {
+            sum += 1;
+        }
+    }
+    printf("%d", sum);
 }
