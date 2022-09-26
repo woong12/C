@@ -104,7 +104,30 @@ int main () {
 
 /* 1271
 
+#include <stdio.h>
 
+int main () {
+    int a, b, c, d;
+    scanf("%d %d", &a, &b);
+
+    if (a % 2 == 0) {
+        c = a * 5;
+    } else if (a == 1) {
+        c = 1;
+    } else {
+        c = a / 2 + 1;
+    }
+    
+    if (b % 2 == 0) {
+        d = b * 5;
+    } else if (b == 1) {
+        d = 1;
+    } else {
+        d = b / 2 + 1;
+    }
+
+    printf("%d", c + d);
+}
 
 ----------*/
 
@@ -159,13 +182,12 @@ int main () {
 #include <stdio.h>
 
 int main () {
-    int a, sum = 0;
-    scanf("%d", &a);
-    
-    for(int i = 0; i <= a; i++) {
-        if(i % 10 == 1) {
-            sum += 1;
+    int n;
+    scanf("%d", &n);
+
+    for(int i = 0; i <= n; i++) {
+        if(n % i == 0) {
+            printf("%d", i);
         }
     }
-    printf("%d", sum);
 }
