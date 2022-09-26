@@ -133,7 +133,18 @@ int main () {
 
 /* 1272
 
+#include <stdio.h>
 
+int main () {
+    int n;
+    scanf("%d", &n);
+
+    for(int i = 1; i <= n; i++) {
+        if(n % i == 0) {
+            printf("%d ", i);
+        }
+    }
+}
 
 ----------*/
 
@@ -185,9 +196,9 @@ int main () {
     int n;
     scanf("%d", &n);
 
-    for(int i = 0; i <= n; i++) {
+    for(int i = 1; i <= n; i++) {
         if(n % i == 0) {
-            printf("%d", i);
+            printf("%d ", i);
         }
     }
 }
