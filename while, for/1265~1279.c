@@ -150,7 +150,24 @@ int main () {
 
 /* 1273
 
+#include <stdio.h>
 
+int main () {
+    int a, sum = 0;
+    scanf("%d", &a);
+
+    for(int i = 1; i <= a; i++) {
+        if(a % i == 0) {
+            sum += 1;
+        }
+    }
+
+        if(sum == 2) {
+            printf("prime");
+        } else {
+            printf("not prime");
+        }
+}
 
 ----------*/
 
@@ -193,12 +210,18 @@ int main () {
 #include <stdio.h>
 
 int main () {
-    int n;
-    scanf("%d", &n);
+    int a, sum = 0;
+    scanf("%d", &a);
 
-    for(int i = 1; i <= n; i++) {
-        if(n % i == 0) {
-            printf("%d ", i);
+    for(int i = 1; i <= a; i++) {
+        if(a % i == 0) {
+            sum += 1;
         }
     }
+
+        if(sum == 2) {
+            printf("prime");
+        } else {
+            printf("not prime");
+        }
 }
