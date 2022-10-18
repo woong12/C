@@ -14,7 +14,7 @@ int main () {
 ----------*/
 
 /* 1266 
-
+ 
 #include <stdio.h>
 
 int main () {
