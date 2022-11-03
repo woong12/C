@@ -1,1 +1,2 @@
-# Code_Up_C
+# Code Up
+# C study
